@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.active1{
+    background-color: red;
+    border-radius: 12px;
+    color: white;
+    }
+
+nav {
+    border-bottom: 3px solid red;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background-color: red;
+    border-radius: 12px;
+    color: white;
+
+}
+
+
+
+
+
+.topNav {
+    background-color: rgb(229, 36, 33);
+}
+
+.banner {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-bottom: 3px solid red;
+    /* border-top: 3px solid red; */
+}
+
+.features {
+    margin: 0;
+    padding: 0;
+}
+
+.slider .col-sm-6 img {
+    border-radius: 5px;
+    position: relative;
+}
+
+.slider .col-sm-6 a {
+    color: black;
+
+}
+
+.slider .col-sm-6 h2 {
+    width: 100%;
+    font-weight: bold;
+    /* font-size: 35px; */
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    display: none;
+}
+
+.slider .col-sm-6 a:hover img {
+    opacity: 0.4;
+    transition: 1s;
+}
+
+.slider .col-sm-6:hover h2 {
+    display: block;
+}
+
+.product {
+    margin: 0;
+    padding: 0;
+}
+
+.product .card .icons {
+    position: absolute;
+    display: none;
+    font-size: 30px;
+    top: 0;
+    background-color: white;
+}
+
+.product .card .icons .fa-heart {
+    padding: 5px;
+    color: red;
+}
+
+.product .card .icons a {
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    /* background-color: black; */
+    /* color: white; */
+}
+
+.product .col-sm-4:hover {
+    box-shadow: 4px 4px 5px gray, -4px -4px 5px gray;
+}
+
+.cards .icons {
+    position: absolute;
+    /* display: none; */
+    font-size: 30px;
+    top: 0;
+    background-color: white;
+}
+
+.cards .icons .fa-heart {
+    padding: 5px;
+    color: red;
+}
+
+.cards .icons a {
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    /* background-color: black; */
+    /* color: white; */
+}
+
+.col-md-3:hover {
+    box-shadow: 4px 4px 5px gray, -4px -4px 5px gray;
+}
+
+.fashion h1 a {
+    color: white;
+}
+.fashion img{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.fashion p{
+    color: white;
+}
+.social{
+    font-size: 30px;
+    color: white;
+}
+
+.fashion {
+    background-color: #e52421;
+}
+
+/* about */
+.about {
+    /* background-color: gainsboro; */
+}
+
+.about h1,
+.about h3 {
+    color: black;
+}
+
+.about a {
+    color: black;
+}
+
+.about i {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+form {}
+
+form input {
+    margin-top: 5px;
+}
+
+form textarea {
+    margin-top: 5px;
+}
+
+.find {
+    width: 100%;
+    text-align: center;
+
+}
+
+.find a {
+    padding: 5px 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.gallery img {
+    border-radius: 200px;
+    box-shadow: 4px 4px 5px gray, -4px -4px 5px gray;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    min-width: 250px;
+    /* Set a default minimum width */
+    margin-left: -125px;
+    /* Divide value of min-width by 2 */
+    background-color: #333;
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 1;
+    /* Add a z-index if needed */
+    left: 50%;
+    /* Center the snackbar */
+    bottom: 30px;
+    /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+
+.nav-item-count {
+    position: relative;
+    background-color: red;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemsCount {
+    position: absolute;
+    z-index: 99999;
+    color: black;
+    top: -10px;
+    right: 0;
+}
+
+/* detailed */
+
+.almond a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+   }
+   .almond h1{
+    font-size: 40px;
+    font-weight: 800;
+   }
+   .almond hr{
+    position: relative;
+    bottom: 20px;
+   }
+   .almond p{
+    font-size: 30px;
+   }
+   .almond input{
+    padding-left: 10px;
+    border: transparent;
+    border-bottom: 1px solid grey;
+   }
+   .almond .btn{
+    padding: 15px 20px;
+    border-radius: 100px;
+   }
+   .almond img{
+    box-shadow: 4px 4px 5px gray,-4px -4px 5px gray;
+    border-radius: 20px;
+   }
+
+   

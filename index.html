@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/0e3236008b.js" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/home.js"></script>
+<style>
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: rgb(229, 36, 33);
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: rgb(229, 36, 33);
+  color: white;
+}
+
+</style>
+</head>
+<body>
+  
+<div id="myModal" class="modal">
+
+  Modal content
+   <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Login Here</h2>
+    </div>
+    <div class="modal-body">
+      <form >
+      
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname"  id='uname' required class='form-control'>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required class='form-control'>
+      
+          <button type="button" class='btn btn-danger' id="login" onclick="login()">Login</button>
+         
+        </div>
+      </form>
+    
+  </div>
+
+</div>
+</div> 
+
+
+  <div class="container-fluid text-white topNav">
+
+    <div class="row  p-2"> 
+      <!--  -->
+      <div class="col-6 float-left">Visitor Count
+        <div class=" float-left mr-3" id="CounterVisitor"> 
+    </div>  
+    </div>
+    <!--  -->
+      <div class="col-6 float-right">
+    <div class="  float-right " id="demo"></div>
+    <div class="  float-right mr-3 "><i class="fa-solid fa-user "></i></div>
+    
+    </div>
+    </div>
+    <!--  -->
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="container">
+
+      <nav class="navbar navbar-expand-md bg-transparent p-0">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="images/logofashion-01-01.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler bg-danger text-white"><i class="fas fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active1" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Productspage.html">Products</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="feedback.html">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item nav-item-count">
+                <div class="itemsCount" id="itemsCount">1</div>
+                <i class="fa-solid fa-bucket "></i>
+              </li>
+              <!-- top find product -->
+        <form class="d-flex">
+          <!-- <input class="form-control" type="search" placeholder="Search" arial-label="Search"> -->
+          
+          <select onchange="location = this.value;" class="" style="width: 200px;" id="mpsearch-category" style="margin-left: 10px;">
+            <option value="Productspage.html"><a href="Productspage.html">All Categories</a></option>
+            <option value="mensproduct.html"><a href="mensproduct.html">Men's Collection</a></option>
+            <option value="womensproduct.html"><a href="womensproduct.html"> Women's Collectionp</a></option>
+            <option value="kidsproduct.html"><a href="kidsproduct.html">kids's Collection</a></option>
+            <option value="index.html"><a href="index.html">Features Products</a></option>
+          
+    </select>
+           <button class="btn btn-danger" type="button" style="margin-left: 10px;"><i class="fa-solid fa-magnifying-glass"></i></button>
+         </form>
+          <!-- End top find product -->
+            </ul>
+          </div>
+        </div>
+        
+      </nav>
+    </div>
+ <!-- Banner Start -->
+
+ <div class="container-fluid banner">
+  <img src="images/banner.jpg" class="img-fluid">
+  <div class="carousel-caption text-dark">
+    <h2 class="btn btn-danger"><a class="text-white btn-outline-white" href="Productspage.html">Order now</a></h2>
+  </div>
+</div>
+<!-- Banner End-->
+
+<!-- Features Start -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center mt-5">
+        <h1>FEATURES</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container slider mt-4">
+    <div class="container features" data-flickity='{ "wrapAround":true, "autoPlay":true}'>
+      <div class="col-sm-6">
+        <a href="mensproduct.html">
+        <img src="images/feature1.jpg" class="img-fluid">
+        <h2 class="text-center">Men's Collection</h2>
+        </a>
+      </div>
+      <div class="col-sm-6">
+        <a href="womensproduct.html">
+        <img src="images/feature2.jpg" class="img-fluid">
+        <h2 class="text-center">Women's Collection</h2>
+      </a>
+      </div>
+    
+      <div class="col-sm-6">
+        <a href="kidsproduct.html">
+        <img src="images/feature3.jpg" class="img-fluid">
+        <h2 class="text-center">Kid's Collection</h2>
+      </a>
+      </div>
+    </div>
+  </div>
+
+<!-- Features End -->
+
+<div class="container text-center mt-5">
+  <h1 id="heading"><span class="text-danger">Our</span> Collection</h1>
+  
+    <!-- Json Fetch -->
+    <div class="row" id="home">
+      
+    </div>
+  </div>
+
+
+
+
+  <!-- footer -->
+  <div class="container-fluid fashion mt-5">
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-6 mt-3 ">
+                <h1><a href="#" >Thrift Fashion Store</a></h1>
+                <p class="mt-3 pr-5">Thrift Fashion Store provides easy shopping facility for second hand cloths in excellent condition to the customers, they can sitin one place and shop online any time anywhere 24/7</p>
+                <h1><a href="#">Contact us</a></h1>
+                <p  class="mt-3"><i  class="fa-solid fa-phone mr-3"></i>021-325-563-85</p>
+                <p  class="mt-3"><i class="fa-solid fa-envelope mr-3"></i> www.thriftfashionstore.com</p>
+                
+            </div>
+
+            <div class="col-md-6  mt-3">
+                <h1><a href="#" class="ml-4">Social Media</a></h1>
+                <i></i>
+
+                <div class="mt-3 ml-4 social">
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-youtube"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                 <i class="fa-brands fa-square-twitter"></i>       
+                </div>
+                <!--  -->
+                <div >
+                  <a href="#"><img src="images/logofashion-01-01.png" class="mt-4 ml-4" ></a>  
+                  <h6 class="mt-4 ml-4" style="color:rgb(229, 36, 33) ;"><i>Free Shipping All over Pakistan.</i></h6>
+                      </div>
+                      <!--  -->
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- footer -->
+
+    <div class="text-center mt-4"><b> &REG; Registered  &COPY; 2022 Thrift Fashion Store All Rights Reserved.</div>
+
+  <!-- end -->
+
+
+
+
+
+
+
+
+  <div class="bg-danger text-center text-white fixed-bottom"><marquee><span class="text-center" id="date"></span><span class="text-center" id="location-j75"></span></marquee></div>
+
+</body>
+</html>
+
+<!-- <script>
+  function login(){
+    alert('fbgvfkd')
+     var inputEmail= document.getElementById("uname").value();
+     //document.getElementById("demo").innerHTML =(inputEmail)
+     //localStorage.setItem("uname", inputEmail.value);
+     //alert(inputEmail);
+    }
+  const d = new Date();
+  document.getElementById("date").innerHTML = d;
+</script> -->
+
+<script>
+  getLocation();
+  var j75 = document.getElementById("location-j75");
+
+  function getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+          j75.innerHTML = "Geolocation is not supported by this browser.";
+      }
+  }
+
+  function showPosition(position) {
+      j75.innerHTML = " Latitude: " + position.coords.latitude +
+          " Longitude: " + position.coords.longitude;
+  }
+
+  var now = new Date();
+  document.getElementById("date").innerHTML = now;
+</script>
+
+<script>
+var n = localStorage.getItem('on_load_counter');
+
+if (n === null) {
+  n = 0;
+}
+n++;
+
+localStorage.setItem("on_load_counter", n);
+
+nums = n.toString().split('').map(Number);
+document.getElementById('CounterVisitor').innerHTML = '';
+for (var i of nums) {
+  document.getElementById('CounterVisitor').innerHTML += '<span class="counter-item">' + i + '</span>';
+}
+
+
+// top name
+text="";
+//var x = prompt("");
+
+//document.getElementById("demo").innerHTML =(x)
+</script>
+
+
+
+
+<script>
+  for(var i=0; i<homecollection.length; i++)
+  {
+      document.getElementById('home').innerHTML+=`
+      <div class="col-md-3  p-2 text-center cards cards11">
+          <img src="${homecollection[i].img}" class="img-fluid" alt="" width="350">
+          <div class="icons icons11">
+              <a href="">
+              <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+              <i class="fa-solid fa-heart"></i> 
+          </div>
+          <h5>${homecollection[i].name}<br> <span class="text-success">${homecollection[i].discount}</span></h5>
+              <p>Rs${homecollection[i].Price}<br>${homecollection[i].desc}</p>
+
+              <button class="btn btn-danger add_to_cart" onclick=getItems(this) id="${homecollection[i].name}"><i class="fa-solid fa-cart-shopping"></i></button>
+
+
+          </div>
+
+
+           
+
+      </div>
+      
+      `
+  }
+
+
+
+
+
+  
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  modal.style.display = "block";
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  
+  </script>
+  <script>
+    $(document).ready(function(){
+  //     if(localStorage.getItem("uname")){
+  //     $("#myModal").css("display", "none");
+  //     var uname_login=localStorage.getItem("uname")
+  //  $("#demo").html(uname_login);
+  //   }
+  $("#login").click(function(){
+    
+   var uname= $("#uname").val();
+ 
+   localStorage.setItem("uname", uname);
+   var uname_login=localStorage.getItem("uname")
+   $("#demo").html(uname_login);
+   $("#myModal").css("display", "none");
+  
+  });
+});
+  </script>
